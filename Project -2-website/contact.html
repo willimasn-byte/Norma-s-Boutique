@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Norma's Boutique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Norma's Boutique home">
+            <img class="brand-logo" src="Images/Screenshot%202026-11-05%20194226.png" alt="Norma's Boutique logo with a yarn ball and needle">
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="collection" aria-labelledby="contact-title">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h1 id="contact-title">Contact Me</h1>
+                    <p>Have a question or want to place a custom order?</p>
+                    <p>Email: willimasn@gmail.com</p>
+                    <p>Instagram: @normasboutique</p>
+                    <p>Based in a cozy corner of the internet, ready to help with handmade pieces.</p>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your order or question" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                        <p id="form-status" aria-live="polite">Send Message opens a Gmail draft. Review it and press Send.</p>
+                        <p><a id="gmail-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=willimasn%40gmail.com">Open Gmail</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>© 2026 Norma's Boutique</footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
