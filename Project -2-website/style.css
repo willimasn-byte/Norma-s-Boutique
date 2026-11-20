@@ -23,6 +23,7 @@ body {
     background-color: var(--bg);
     color: var(--nav-text);
     font-family: Georgia, serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
 }
@@ -43,10 +44,11 @@ body {
 
 .brand-logo {
     display: block;
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 260px;
+    height: 210px;
+    margin-inline: auto;
+    object-fit: contain;
+    transform: translateY(18px);
     filter: drop-shadow(0 4px 5px rgba(92, 64, 80, 0.12));
 }
 
@@ -67,11 +69,19 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     margin: 0 18px;
-    transition: opacity 0.2s ease;
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px 8px 0 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover {
-    opacity: 0.75;
+    background-color: rgba(255, 250, 252, 0.45);
+}
+
+nav a:focus-visible {
+    outline: 3px solid var(--heading);
+    outline-offset: 3px;
 }
 
 main {
@@ -118,6 +128,18 @@ main {
     margin: 0 auto;
     border-radius: 12px;
     box-shadow: 0 8px 18px var(--shadow);
+}
+
+.about-image-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-image-gallery img {
+    width: calc(50% - 10px);
 }
 
 .doll-image {
@@ -281,9 +303,9 @@ footer {
 }
 
 nav a[aria-current="page"] {
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 6px;
+    background-color: var(--section-bg);
+    color: var(--heading);
+    box-shadow: 0 -2px 8px var(--shadow);
 }
 a:active,
 button:active {

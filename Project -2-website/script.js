@@ -3,7 +3,6 @@ const contactForm = document.getElementById("contact-form");
 if (contactForm) {
     const messageField = document.getElementById("message");
     const statusText = document.getElementById("form-status");
-    const gmailLink = document.getElementById("gmail-link");
     const productName = new URLSearchParams(window.location.search).get("product");
 
     if (productName && messageField) {
@@ -30,11 +29,6 @@ if (contactForm) {
         gmailComposeUrl.searchParams.set("to", "willimasn@gmail.com");
         gmailComposeUrl.searchParams.set("su", subject);
         gmailComposeUrl.searchParams.set("body", body);
-
-        if (gmailLink) {
-            gmailLink.href = gmailComposeUrl.toString();
-            gmailLink.textContent = "Open Gmail draft to send";
-        }
 
         if (statusText) {
             statusText.textContent = "Gmail will open with your message ready. Review it and press Send.";
